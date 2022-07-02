@@ -1,0 +1,14 @@
+name: Cypress E2E tests
+on: [push]
+jobs:
+  cypress-e2e:
+    name: Cypress E2E tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - name: Cypress Tests
+        uses: cypress-io/github-action@v4
