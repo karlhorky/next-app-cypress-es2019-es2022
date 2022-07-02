@@ -13,3 +13,4 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - run: yarn tsc
+      - run: yarn tsc --project cypress/tsconfig.json
